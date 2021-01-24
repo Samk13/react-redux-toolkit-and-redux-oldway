@@ -5,18 +5,25 @@ import React, {
   useRef,
   useState
 } from "react";
+// import {
+//   createTodoActionCreator,
+//   EditTodoActionCreator,
+//   ToggleTodoActionCreator,
+//   DeleteTodoActionCreator,
+//   SelectTodoActionCreator
+// } from '../redux-og'
 import {
   createTodoActionCreator,
   EditTodoActionCreator,
   ToggleTodoActionCreator,
   DeleteTodoActionCreator,
   SelectTodoActionCreator
-} from '../redux-og'
-import { Todo, State } from "../type";
+} from '../redux-toulkit'
+import { State } from "../type";
 import { useSelector, useDispatch } from 'react-redux'
 import "./App.css";
 
-const App = function() {
+const App: React.FC = () => {
   const dispatch = useDispatch();
   const todos = useSelector((state: State) => state.todos)
   const selectedTodoId = useSelector((state:State) => state.selectedTodo)
